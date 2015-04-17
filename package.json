@@ -4,8 +4,15 @@
   "description": "Experiment for building frontend without task runners",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preserve": "cp app/index.html dist/",
+    "serve": "http-server -p 9090 dist/",
+    "clean": "rimraf dist"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.8.0",
+    "rimraf": "^2.3.2"
+  }
 }

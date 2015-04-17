@@ -11,7 +11,7 @@
     "postclean": "mkdir -p dist/css &&  mkdir -p dist/js",
     "build": "npm run build:styles && npm run build:js",
     "build:styles": "node-sass --output-style compressed app/sass/screen.scss > dist/css/screen.css",
-    "build:js": "browserify app/components/index.js -o dist/js/packed.js"
+    "build:js": "browserify app/components/index.js -o dist/js/packed.js --debug"
   },
   "author": "",
   "license": "ISC",

@@ -1,0 +1,11 @@
+{
+  "name": "npm-scripts-test",
+  "version": "0.0.0",
+  "description": "Experiment for building frontend without task runners",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

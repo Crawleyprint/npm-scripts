@@ -9,6 +9,7 @@
     "serve": "http-server -p 9090 dist/",
     "clean": "rimraf dist",
     "postclean": "mkdir -p dist/css &&  mkdir -p dist/js",
+    "prebuild:js": "jshint `find app/components -name '*.js'`",
     "build": "npm run build:styles && npm run build:js",
     "build:styles": "node-sass --output-style compressed app/sass/screen.scss > dist/css/screen.css",
     "build:js": "browserify app/components/index.js -o dist/js/packed.js --debug"
@@ -18,6 +19,7 @@
   "devDependencies": {
     "browserify": "^9.0.8",
     "http-server": "^0.8.0",
+    "jshint": "^2.7.0",
     "node-sass": "^2.1.1",
     "rimraf": "^2.3.2"
   }

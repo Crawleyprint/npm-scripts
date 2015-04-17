@@ -5,14 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preserve": "cp app/index.html dist/",
+    "preserve": "npm run clean && cp app/index.html dist/ && npm run build:styles",
     "serve": "http-server -p 9090 dist/",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "postclean": "mkdir -p dist/css",
+
+    "build:styles": "node-sass --output-style compressed app/sass/screen.scss > dist/css/screen.css"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "http-server": "^0.8.0",
+    "node-sass": "^2.1.1",
     "rimraf": "^2.3.2"
   }
 }
